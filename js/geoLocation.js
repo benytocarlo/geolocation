@@ -30,19 +30,10 @@ function showPosition(position)
    
  }
 
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 8,
-//     center: new google.maps.LatLng(-28.643387, 153.612224),
-//     mapTypeId: google.maps.MapTypeId.ROADMAP
-//   }
-//   var map = new google.maps.Map(document.getElementById("geo"), mapOptions);
-// }
-
 function loadScript() {
   var script = document.createElement("script");
   script.type = "text/javascript";
-  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyDerj7Cy5bCKC_jsJawg5c91XQuENtB9oU&sensor=true&callback=getLocation";
+  script.src = "http://maps.googleapis.com/maps/api/js?key={YOUR GOOGLE API KEY GOES HERE}&sensor=true&callback=getLocation";
   document.body.appendChild(script);
 }
 function error_handler(err) {
@@ -60,7 +51,6 @@ function error_handler(err) {
 }
 
 window.onload = function(){       
-//  getLocation();
   loadScript();
                            
 }
